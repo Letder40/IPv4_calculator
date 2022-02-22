@@ -1,5 +1,5 @@
 import os
-from random import random
+import random
 print("CALCULADORA IP                    ARV")
 input("enter para continuar")
 ips = []
@@ -43,13 +43,14 @@ def cip():
     os.system("cls")
     cip()
 def aip():
-    bit1 = random(0,255)
-    bit2 = random(0,255)
-    bit3 = random(0,255)
-    bit4 = random(0,255)
-    barra = random(0,32)
-    myip = bit1 +"." + bit2 +"."+ bit3 +"."+bit4 +"/"+ barra
-    input("enter para generar uno nuevo")
+    y = random.randint(1 , 255)
+    x = random.randint(1 , 255)
+    z = random.randint(1 , 255)
+    h = random.randint(1 , 255)
+    barra = random.randint(1 , 32)
+    input("enter para generar ip")
+    print (str(y) +"."+str(x)+"."+str(z)+"."+str(h)+"/"+str(barra))
+    input("enter para continuar")
     os.system("cls")
     aip()
 def menu():
