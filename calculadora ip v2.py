@@ -1,4 +1,5 @@
 import os
+from random import random
 print("CALCULADORA IP                    ARV")
 input("enter para continuar")
 ips = []
@@ -41,16 +42,28 @@ def cip():
     input("enter para seguir")
     os.system("cls")
     cip()
-
+def aip():
+    bit1 = random(0,255)
+    bit2 = random(0,255)
+    bit3 = random(0,255)
+    bit4 = random(0,255)
+    barra = random(0,32)
+    myip = bit1 +"." + bit2 +"."+ bit3 +"."+bit4 +"/"+ barra
+    input("enter para generar uno nuevo")
+    os.system("cls")
+    aip()
 def menu():
     global seleccionador
     print("escribe ' 1 ' para seleccionar el modo decimal a binario")
     print("escribe ' 2 ' para seleccionar el modo binario a decimal")
+    print("escribe ' 3 ' para seleccionar el modo ip aleatoria")
     seleccionador = input("selecciona el valor correspondiente   ")
     if seleccionador==str(1):
         ip()
     if seleccionador==str(2):
-        cip()          
+        cip()
+    if seleccionador==str(3):
+        aip()          
 menu()
 
 
