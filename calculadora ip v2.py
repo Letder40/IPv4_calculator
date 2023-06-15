@@ -1,6 +1,6 @@
 import os
 import random
-print("CALCULADORA IP                    ARV")
+print("CALCULADORA IP                    ")
 input("enter para continuar")
 ips = []
 seleccionador = []
