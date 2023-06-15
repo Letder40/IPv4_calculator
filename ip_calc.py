@@ -1,9 +1,10 @@
 import os
 import random
-print("CALCULADORA IP                    ")
+print("CALCULADORA IP")
 input("enter para continuar")
 ips = []
 seleccionador = []
+
 def ip():
     global ips
     if ips != []:
@@ -24,6 +25,7 @@ def ip():
     input("enter para seguir")
     os.system("cls")
     ip()
+
 def cip():
     bit = []
     valor2 = []
@@ -42,6 +44,7 @@ def cip():
     input("enter para seguir")
     os.system("cls")
     cip()
+
 def aip():
     y = random.randint(1 , 255)
     x = random.randint(1 , 255)
@@ -53,6 +56,7 @@ def aip():
     input("enter para continuar")
     os.system("cls")
     aip()
+
 def menu():
     global seleccionador
     print("escribe ' 1 ' para seleccionar el modo decimal a binario")
@@ -65,6 +69,8 @@ def menu():
         cip()
     if seleccionador==str(3):
         aip()          
-menu()
+
+if __name__ == "__main__":
+    menu() 
 
 
